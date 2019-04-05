@@ -12,13 +12,14 @@ f.close()
 
 
 duplicates = []
-counter_dict={}
+counter_dict = {}
 for name in names_1:
     counter_dict[name] = 1
 
 for name in names_2:
     if name in counter_dict:
         duplicates.append(name)
+
 # for name_1 in names_1:
 #     for name_2 in names_2:
 #         if name_1 == name_2:
@@ -27,4 +28,5 @@ for name in names_2:
 end_time = time.time()
 print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print(f"runtime: {end_time - start_time} seconds")
-# Took 7.8 seconds!
+# Originally Took 7.8 seconds!
+# Down to .009 seconds
